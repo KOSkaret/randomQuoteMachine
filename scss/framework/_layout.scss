@@ -1,0 +1,48 @@
+body, p, div {
+  display:flex;
+  flex-direction: column;
+}
+
+body{
+  display:flex;
+  align-items: center;
+
+  font-family: $body-font;
+
+  background-color: $background-color;
+}
+
+
+
+.box{
+  background-color: $white;
+  padding: 30px 20px 0 30px;
+
+  margin-top: 30vh;
+
+  width: 40vw;
+  height: 30vh;
+}
+
+.quote{
+  align-self: center;
+}
+
+#quote{
+  font-size: $font-size;
+}
+
+#author{
+  align-self: flex-end;
+  color: $grey-700;
+  font-size: $font-size-author;
+}
+
+#btn{
+  align-self:center;
+}
+
+.share{
+  flex-wrap: nowrap;
+  flex-direction: row;
+}

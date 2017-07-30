@@ -2,8 +2,44 @@
 ======================================*/
 /* Base variables, with mixin and placeholders.
 ===============================================*/
+@import url("https://fonts.googleapis.com/css?family=Muli");
 /* Framework - Structure and layout files.
 ===============================================*/
+body, p, div {
+  display: flex;
+  flex-direction: column; }
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: "Muli", sans-serif;
+  background-color: #673ab7; }
+
+.box {
+  background-color: #FFFFFF;
+  padding: 30px 20px 0 30px;
+  margin-top: 30vh;
+  width: 40vw;
+  height: 30vh; }
+
+.quote {
+  align-self: center; }
+
+#quote {
+  font-size: 200%; }
+
+#author {
+  align-self: flex-end;
+  color: #616161;
+  font-size: 140%; }
+
+#btn {
+  align-self: center; }
+
+.share {
+  flex-wrap: nowrap;
+  flex-direction: row; }
+
 /* Modules, re-usable site elements.
 ===============================================*/
 
