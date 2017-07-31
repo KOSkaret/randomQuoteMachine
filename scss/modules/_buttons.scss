@@ -1,0 +1,14 @@
+.btn{
+  @extend %default-border;
+  border-style: solid;
+  border-color: $button-color-border;
+  border-width: 2px;
+  background-color: $button-color-bg;
+
+  padding: 5px 10px;
+}
+
+.btn:hover{
+  background-color: $button-color-border;
+  cursor: pointer;
+}

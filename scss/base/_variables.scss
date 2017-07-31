@@ -11,10 +11,14 @@ $grey-700: #616161;
 $white: #FFFFFF;
 
 //Primary colors:
+  //background
+    $background-color: $deep-purple-500;
+    $background-color-text: $white;
+  //Fonts
+    $font-size: 200%;
+    $font-size-author: 140%;
+    $primary-font-color: $deep-purple-800;
 
-$background-color: $deep-purple-500;
-$background-color-text: $white;
-
-$font-size: 200%;
-$font-size-author: 140%;
-$primary-font-color: $deep-purple-800;
+  //buttons
+    $button-color-border: $deep-purple-800;
+    $button-color-bg: $deep-purple-500;

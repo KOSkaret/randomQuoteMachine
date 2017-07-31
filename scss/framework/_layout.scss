@@ -4,7 +4,10 @@ body, p, div {
 }
 
 body{
+  width: 100vw;
+  height: 100vh;
   display:flex;
+  justify-content: center;
   align-items: center;
 
   font-family: $body-font;
@@ -12,37 +15,33 @@ body{
   background-color: $background-color;
 }
 
+.row{
+  flex-direction: row;
+  align-items: baseline;
 
+}
 
 .box{
+  @extend %default-border;
   background-color: $white;
-  padding: 30px 20px 0 30px;
-
-  margin-top: 30vh;
-
-  width: 40vw;
-  height: 30vh;
-}
+  padding: 20px 40px;
+  width: 600px;}
 
 .quote{
   align-self: center;
-}
 
-#quote{
-  font-size: $font-size;
-}
+  #quote{
+    font-size: $font-size;
+  }
 
-#author{
-  align-self: flex-end;
-  color: $grey-700;
-  font-size: $font-size-author;
-}
-
-#btn{
-  align-self:center;
+  #author{
+    align-self: flex-end;
+    color: $grey-700;
+    font-size: $font-size-author;
+  }
 }
 
 .share{
-  flex-wrap: nowrap;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
