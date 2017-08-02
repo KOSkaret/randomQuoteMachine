@@ -28,9 +28,11 @@ body{
   width: 600px;}
 
 .quote{
-  align-self: center;
-
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
   #quote{
+    flex-direction: row;
     font-size: $font-size;
   }
 
