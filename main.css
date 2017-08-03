@@ -2373,6 +2373,9 @@ body {
 .share {
   justify-content: space-between;
   align-items: baseline; }
+  .share #twitter-share-button a {
+    color: #000;
+    text-decoration: none; }
 
 /* Modules, re-usable site elements.
 ===============================================*/

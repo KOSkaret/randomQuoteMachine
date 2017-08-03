@@ -7,22 +7,31 @@ $(document).ready(function(){
     {quote:"Perfect is the enemy of good.","author":"Voltaire"},
     {quote:"...there are people who try to look as if they are doing a good and thorough job, and then there are the people who actually damn well do it, for its own sake. ",author:" John D. MacDonald, Free Fall in Crimson "},
     {quote:"Build a good name. Keep your name clean. Don’t make compromises, don’t worry about making a bunch of money or being successful — be concerned with doing good work and make the right choices and protect your work. And if you build a good name, eventually, that name will be its own currency.",author:"William S. Burroughs"},
-    {quote:"How easy it is to slip. How hard it is to climb. How wise it is to keep in stepAnd never fall behind",author:"Richelle E. Goodrich, Slaying Dragons "}
+    {quote:"How easy it is to slip. How hard it is to climb. How wise it is to keep in step. And never fall behind",author:"Richelle E. Goodrich, Slaying Dragons "}
   ];
 
-  var tempInt = getRandomNmb(jsonTable.length);
-  $('#quote').html(jsonTable[tempInt].quote);
-  $('#author').html('-' + jsonTable[tempInt].author);
 
+  updateQuote(jsonTable);
 
     $('#btn').on('click', function() {
-      var int = getRandomNmb(jsonTable.length);
-      console.log(int);
-      $('#quote').html(jsonTable[int].quote);
-      $('#author').html('-' + jsonTable[int].author);
+      updateQuote(jsonTable);
     });
 
-    function getRandomNmb(int){
-      return Math.floor(Math.random() * int);
+    function tweetable(quote, author){
+      if((139 - author.length) < quote.length ){
+      return (quote.slice(0,(136 - author.length)) + "... " + author).replace(/\s/g,"%20");
+    }
+      else{
+        return (quote + "%20" + author).replace(/\s/g,"%20");}
+    }
+
+    function updateQuote(table){
+      var int = Math.floor(Math.random() *table.length);
+      var author = '-' + table[int].author;
+      var quote = table[int].quote;
+
+      $('#quote').html(quote);
+      $('#author').html(author);
+      $('#twitter-share-button').html('<a href="https://twitter.com/intent/tweet?text=' + tweetable(quote,author) + '"><div class="btn" id="twitter-share-button"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>')
     }
 });
