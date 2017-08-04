@@ -32,6 +32,6 @@ $(document).ready(function(){
 
       $('#quote').html(quote);
       $('#author').html(author);
-      $('#twitter-share-button').html('<a href="https://twitter.com/intent/tweet?text=' + tweetable(quote,author) + '"><div class="btn" id="twitter-share-button"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>')
+      $('#twitter-share-button').html('<a href="https://twitter.com/intent/tweet?text=' + tweetable(quote,author) + '" target="_blank" ><div class="btn" id="twitter-share-button"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>')
     }
 });
